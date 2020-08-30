@@ -16,6 +16,7 @@ HomePage.getInitialProps = async ({ req, query }) => {
 function HomePage({ profiles, page, pageCount }) {
   return (
     <>
+      <p>hello<p>
       <ul>
         {profiles.map(p => (
           <li className="profile" key={p.id}>
