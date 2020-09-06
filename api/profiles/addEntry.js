@@ -33,5 +33,9 @@ module.exports = async (req, res) => {
 	          (type, percent, amount, title, explanation, date)
 	  VALUES  (${req.query.type}, ${req.query.percent}, ${req.query.amount}, ${req.query.title}, ${req.query.explanation}, ${req.query.date})
    `)
-  res.status(200).send("Should've worked")
+  const newTable = await db.query(escape`
+      SELECT *
+      FROM compPostInfo
+    `)
+  res.status(200).json(newTable)
 }
