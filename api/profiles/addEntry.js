@@ -31,7 +31,7 @@ module.exports = async (req, res) => {
 	  INSERT
 	  INTO    compPostInfo
 	          (type, percent, amount, title, explanation, date)
-	  VALUES  (${req.params.type}, ${req.params.percent}, ${req.params.amount}, ${req.params.title}, ${req.params.explanation}, ${req.params.date})
+	  VALUES  ("Hi","bye","beep","beep","beep","beep")
    `)
   const newTable = await db.query(escape`
       SELECT *
