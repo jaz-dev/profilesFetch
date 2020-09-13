@@ -4,7 +4,7 @@ const escape = require('sql-template-strings')
 module.exports = async (req, res) => {
   const posts = await db.query(escape`
       SELECT *
-      FROM postInfo
+      FROM compPostInfo
     `)
 
   res.status(200).json({ posts})
