@@ -5,6 +5,7 @@ module.exports = async (req, res) => {
   const posts = await db.query(escape`
       SELECT *
       FROM compPostInfo
+      ORDER BY date
     `)
 
   res.status(200).json({ posts})
